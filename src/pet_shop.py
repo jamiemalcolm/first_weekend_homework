@@ -56,3 +56,11 @@ def get_pets_by_breed(shop, breed):
 #                 if k["breed"] == description:
 #                     num_of_breed.append(k)
 #     return num_of_breed
+
+# find the pet by name given and return if true, return none if false
+
+
+def find_pet_by_name(shop, pet_name):
+    for pet in shop["pets"]:
+        if pet["name"] == pet_name:
+            return pet
