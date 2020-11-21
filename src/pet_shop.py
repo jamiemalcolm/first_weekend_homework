@@ -64,3 +64,11 @@ def find_pet_by_name(shop, pet_name):
     for pet in shop["pets"]:
         if pet["name"] == pet_name:
             return pet
+
+# remove a given pet.
+
+
+def remove_pet_by_name(shop, sold_pet):
+    for pet in shop["pets"]:
+        if pet["name"] == sold_pet:
+            shop["pets"].remove(pet)
