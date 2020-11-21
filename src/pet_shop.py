@@ -1,6 +1,8 @@
 # WRITE YOUR FUNCTIONS HERE
 
 # accessing dictionary one level in
+
+
 def get_pet_shop_name(shop):
     return shop["name"]
 
@@ -111,3 +113,18 @@ def add_pet_to_customer(customers, new_pet):
 def customer_can_afford_pet(customers, new_pet):
     if new_pet["price"] <= customers["cash"]:
         return True
+    else:
+        return False
+
+
+# integration tests
+# check for pet being available
+# add 1 to pets sold
+# take customers cash
+# add cash to shops funds
+
+def sell_pet_to_customer(shop, new_pet, customers):
+    customers["pets"].append(new_pet)
+    shop["admin"]["pets_sold"] += 1
+    customers["cash"] -= new_pet["price"]
+    shop["admin"]["total_cash"] += new_pet["price"]
