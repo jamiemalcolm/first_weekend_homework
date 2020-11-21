@@ -36,3 +36,23 @@ def get_stock_count(shop):
     for pet in shop:
         stock = len(shop["pets"])
         return stock
+
+
+# accssing dictionary one level in then counting items in a list that match param
+
+def get_pets_by_breed(shop, breed):
+    num_of_breed = []
+    for pet in shop["pets"]:
+        if pet["breed"] == breed:
+            num_of_breed.append(pet)
+    return num_of_breed
+# def get_pets_by_breed(shop, description):
+#     num_of_breed = []
+#     for key, val in shop.items():
+#         print(key)
+#         if key == "pets":
+#             for i, k in enumerate(val):
+#                 print(i, k)
+#                 if k["breed"] == description:
+#                     num_of_breed.append(k)
+#     return num_of_breed
