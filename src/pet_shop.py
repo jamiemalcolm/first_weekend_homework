@@ -67,6 +67,7 @@ def find_pet_by_name(shop, pet_name):
         if pet["name"] == pet_name:
             return pet
 
+
 # remove a given pet.
 
 
@@ -117,14 +118,28 @@ def customer_can_afford_pet(customers, new_pet):
         return False
 
 
+# def sell_pet_to_customer(shop, new_pet, customers):
+#     for pet in shop["pets"]:
+#         if new_pet == pet["name"]:
+#             customers["pets"].append(new_pet)
+#             shop["admin"]["pets_sold"] += 1
+#             customers["cash"] -= new_pet["price"]
+#             shop["admin"]["total_cash"] += new_pet["price"]
+#         else:
+#             return False
+# def sell_pet_to_customer(shop, new_pet, customers):
+#     num_sold = len(new_pet)
+#     amount = new_pet["price"]
+#     find_pet_by_name(shop, new_pet)
+#     add_pet_to_customer(customers, new_pet)
+#     remove_pet_by_name(shop, new_pet)
+#     increase_pets_sold(shop, num_sold)
+#     remove_customer_cash(customers, new_pet["price"])
+#     add_or_remove_cash(shop, amount)
+
+
 # integration tests
 # check for pet being available
 # add 1 to pets sold
 # take customers cash
 # add cash to shops funds
-
-def sell_pet_to_customer(shop, new_pet, customers):
-    customers["pets"].append(new_pet)
-    shop["admin"]["pets_sold"] += 1
-    customers["cash"] -= new_pet["price"]
-    shop["admin"]["total_cash"] += new_pet["price"]
